@@ -2,6 +2,7 @@
 <html>
     <head>
         <link href="resources/css/style.css" rel="stylesheet">
+        <script src="resources/scripts/flex.js"></script>
         <title>Test Site</title>
     </head>
     <body>
@@ -78,7 +79,38 @@
             <h2>Text Styles</h2>
         </section>
         <section class="basic-container">
-            <h2>Position Styles</h2>
+            <h2>Flexbox</h2>
+            <form action="javascript:makeFlex(h_select.value, v_select.value, n_box.value, rw_box.checked, rh_box.checked)">
+                <label for="h_select">Horizontal allignment (justify-content): </label>
+                <select name="horizontal" id="h_select">
+                    <option value="flex-start">flex-start</option>
+                    <option value="flex-end">flex-end</option>
+                    <option value="center">center</option>
+                    <option value="space-around">space-around</option>
+                    <option value="space-between">space-between</option>
+                </select>
+                <br>
+                <label for="v_select">Vertical allignment (align-items): </label>
+                <select name="vertical" id="v_select">
+                    <option value="flex-start">flex-start</option>
+                    <option value="flex-end">flex-end</option>
+                    <option value="center">center</option>
+                    <option value="baseline">baseline</option>
+                    <option value="stretch">stretch</option>
+                </select>
+                <br>
+                <label for="n_box">Number of boxes: </label>
+                <input type="number" min="1" max="50" value="1" id="n_box"/>
+                <br>
+                <label for="rw_box">Random Width: </label>
+                <input type="checkbox" id="rw_box"/>
+                <br>
+                <label for="rh_box">Random Height: </label>
+                <input type="checkbox" id="rh_box"/>
+                <br>
+                <input type="submit" value="Submit"/>
+            </form>
+            <div class="flex-example" id="flex"></div>
         </section>
         <section class="basic-container">
             <h2>HTML Forms</h2>

@@ -22,6 +22,20 @@ html {
     width: 31%;
 }
 
+.box {
+    width: 100px;
+    height: 1em;
+    border: 1px solid black;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.flex-example {
+    display: none;
+    background-color: beige;
+    height: 200px;
+}
+
 .red {
     background-color: rgb(255, 0, 0);
     color: white;
