@@ -13,6 +13,7 @@
     "rules": {
 		"linebreak-style": ["error", "windows"],
 		"indent": ["error", 4],
-		"quotes": ["error", "double"]
+		"quotes": ["error", "double"],
+		"no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
     }
 }

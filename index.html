@@ -2,7 +2,7 @@
 <html>
     <head>
         <link href="resources/css/style.css" rel="stylesheet">
-        <script src="resources/scripts/flex.js"></script>
+        <script type="text/javascript" src="resources/scripts/flex.js" async></script>
         <title>Test Site</title>
     </head>
     <body>
@@ -80,7 +80,7 @@
         </section>
         <section class="basic-container">
             <h2>Flexbox</h2>
-            <form action="javascript:makeFlex(h_select.value, v_select.value, n_box.value, rw_box.checked, rh_box.checked)">
+            <form action="javascript:makeFlex(h_select.value, v_select.value, n_box.value, rw_box.checked, rh_box.checked, wrap_select.value)">
                 <label for="h_select">Horizontal allignment (justify-content): </label>
                 <select name="horizontal" id="h_select">
                     <option value="flex-start">flex-start</option>
@@ -107,6 +107,13 @@
                 <br>
                 <label for="rh_box">Random Height: </label>
                 <input type="checkbox" id="rh_box"/>
+                <br>
+                <label for="wrap_select">Wrap: </label>
+                <select name="wrap_select" id="wrap_select">
+                    <option value="nowrap">nowrap</option>
+                    <option value="wrap">wrap</option>
+                    <option value="wrap-reverse">wrap-reverse</option>
+                </select>
                 <br>
                 <input type="submit" value="Submit"/>
             </form>
