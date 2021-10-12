@@ -80,7 +80,15 @@
         </section>
         <section class="basic-container">
             <h2>Flexbox</h2>
-            <form action="javascript:makeFlex(h_select.value, v_select.value, n_box.value, rw_box.checked, rh_box.checked, wrap_select.value)">
+            <form action="">
+                <label for="d_select">Direction (flew-direction): </label>
+                <select name="direction" id="d_select">
+                    <option value="row">row</option>
+                    <option value="row-reverse">row-reverse</option>
+                    <option value="column">column</option>
+                    <option value="column-reverse">column-reverse</option>
+                </select>
+                <br>
                 <label for="h_select">Horizontal allignment (justify-content): </label>
                 <select name="horizontal" id="h_select">
                     <option value="flex-start">flex-start</option>
@@ -99,6 +107,16 @@
                     <option value="stretch">stretch</option>
                 </select>
                 <br>
+                <label for="r_select">Row allignment (align-content): </label>
+                <select name="column" id="r_select">
+                    <option value="flex-start">flex-start</option>
+                    <option value="flex-end">flex-end</option>
+                    <option value="center">center</option>
+                    <option value="space-around">space-around</option>
+                    <option value="space-between">space-between</option>
+                    <option value="stretch">stretch</option>
+                </select>
+                <br>
                 <label for="n_box">Number of boxes: </label>
                 <input type="number" min="1" max="50" value="1" id="n_box"/>
                 <br>
@@ -114,8 +132,63 @@
                     <option value="wrap">wrap</option>
                     <option value="wrap-reverse">wrap-reverse</option>
                 </select>
+            </form>
+            <div class="flex-example" id="flex"></div>
+        </section>
+        <section class="basic-container">
+            <h2>Grid</h2>
+            <form action="">
+                <label for="d_select">Direction (flew-direction): </label>
+                <select name="direction" id="d_select">
+                    <option value="row">row</option>
+                    <option value="row-reverse">row-reverse</option>
+                    <option value="column">column</option>
+                    <option value="column-reverse">column-reverse</option>
+                </select>
                 <br>
-                <input type="submit" value="Submit"/>
+                <label for="h_select">Horizontal allignment (justify-content): </label>
+                <select name="horizontal" id="h_select">
+                    <option value="flex-start">flex-start</option>
+                    <option value="flex-end">flex-end</option>
+                    <option value="center">center</option>
+                    <option value="space-around">space-around</option>
+                    <option value="space-between">space-between</option>
+                </select>
+                <br>
+                <label for="v_select">Vertical allignment (align-items): </label>
+                <select name="vertical" id="v_select">
+                    <option value="flex-start">flex-start</option>
+                    <option value="flex-end">flex-end</option>
+                    <option value="center">center</option>
+                    <option value="baseline">baseline</option>
+                    <option value="stretch">stretch</option>
+                </select>
+                <br>
+                <label for="r_select">Row allignment (align-content): </label>
+                <select name="column" id="r_select">
+                    <option value="flex-start">flex-start</option>
+                    <option value="flex-end">flex-end</option>
+                    <option value="center">center</option>
+                    <option value="space-around">space-around</option>
+                    <option value="space-between">space-between</option>
+                    <option value="stretch">stretch</option>
+                </select>
+                <br>
+                <label for="n_box">Number of boxes: </label>
+                <input type="number" min="1" max="50" value="1" id="n_box"/>
+                <br>
+                <label for="rw_box">Random Width: </label>
+                <input type="checkbox" id="rw_box"/>
+                <br>
+                <label for="rh_box">Random Height: </label>
+                <input type="checkbox" id="rh_box"/>
+                <br>
+                <label for="wrap_select">Wrap: </label>
+                <select name="wrap_select" id="wrap_select">
+                    <option value="nowrap">nowrap</option>
+                    <option value="wrap">wrap</option>
+                    <option value="wrap-reverse">wrap-reverse</option>
+                </select>
             </form>
             <div class="flex-example" id="flex"></div>
         </section>
